@@ -13,6 +13,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth2", "OAuth2", "{58DAF4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJsAuthentication", "AngularJsAuthentication\AngularJsAuthentication.csproj", "{F04E0FA4-7F5F-421C-9AEA-608EC964BFB3}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJsAuthentication.Web(1)", "AngularJsAuthentication.Web\", "{15F412C1-9A54-4AA1-BC4F-142508C5A901}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56562"
+		Debug.AspNetCompiler.PhysicalPath = "AngularJsAuthentication.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56562\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56562"
+		Release.AspNetCompiler.PhysicalPath = "AngularJsAuthentication.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56562\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56562"
+		SlnRelativePath = "AngularJsAuthentication.Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,11 +57,16 @@ Global
 		{F04E0FA4-7F5F-421C-9AEA-608EC964BFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F04E0FA4-7F5F-421C-9AEA-608EC964BFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F04E0FA4-7F5F-421C-9AEA-608EC964BFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F412C1-9A54-4AA1-BC4F-142508C5A901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F412C1-9A54-4AA1-BC4F-142508C5A901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F412C1-9A54-4AA1-BC4F-142508C5A901}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F412C1-9A54-4AA1-BC4F-142508C5A901}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F04E0FA4-7F5F-421C-9AEA-608EC964BFB3} = {58DAF4C3-1C4E-4A79-990F-BCD2A8160806}
+		{15F412C1-9A54-4AA1-BC4F-142508C5A901} = {58DAF4C3-1C4E-4A79-990F-BCD2A8160806}
 	EndGlobalSection
 EndGlobal
