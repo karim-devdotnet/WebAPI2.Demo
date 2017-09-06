@@ -11,10 +11,14 @@ namespace AngularJsAuthentication.Controllers
     public class AccountController : ApiController
     {
         private AuthRepository _repo = null;
+        private Auth2Repository _repo2 = null;
+
 
         public AccountController()
         {
             _repo = new AuthRepository();
+            _repo2 = new Auth2Repository();
+
         }
 
         //Post api/Account/Register
@@ -41,14 +45,14 @@ namespace AngularJsAuthentication.Controllers
 
         [AllowAnonymous]
         [Route("Register2")]
-        public IHttpActionResult Register2(UserModel userModel)
+        public async Task<IHttpActionResult> Register2(UserModel userModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            IdentityResult result = _repo.Register(userModel);
+            IdentityResult result = await _repo2.RegisterUser(userModel);
 
             IHttpActionResult errorResult = GetErrorResult(result);
 
@@ -72,6 +76,7 @@ namespace AngularJsAuthentication.Controllers
             if (disposing)
             {
                 _repo.Dispose();
+                _repo2.Dispose();
             }
 
             base.Dispose(disposing);

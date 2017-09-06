@@ -1,4 +1,5 @@
-﻿using AngularJsAuthentication.Repositories;
+﻿using AngularJsAuthentication.Models;
+using AngularJsAuthentication.Repositories;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security.OAuth;
 using System;
@@ -22,10 +23,20 @@ namespace AngularJsAuthentication.Providers
             //enabling CORS (Cross Origin Resource Sharing) in Web API as well for the OAuth bearer token provider.
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
-            using (AuthRepository _repo = new AuthRepository())
+            //using (AuthRepository _repo = new AuthRepository())
+            //{
+            //    IdentityUser user = await _repo.FindUser(context.UserName, context.Password);
+            //    if(user==null)
+            //    {
+            //        context.SetError("invalid_grant", "The user name or password is incorrect.");
+            //        return;
+            //    }
+            //}
+
+            using (Auth2Repository _repo = new Auth2Repository())
             {
-                IdentityUser user = await _repo.FindUser(context.UserName, context.Password);
-                if(user==null)
+                AppUser user = await _repo.FindUser(context.UserName, context.Password);
+                if (user == null)
                 {
                     context.SetError("invalid_grant", "The user name or password is incorrect.");
                     return;

@@ -13,7 +13,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
 
         _logOut();
 
-        return $http.post(serviceBase + 'api/account/register', registration).then(function (response) {
+        return $http.post(serviceBase + 'api/account/register2', registration).then(function (response) {
             return response;
         });
 
@@ -54,6 +54,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
 
     var _fillAuthData = function () {
 
+        localStorageService.remove("authorizationData");
         var authData = localStorageService.get('authorizationData');
         if (authData) {
             _authentication.isAuth = true;

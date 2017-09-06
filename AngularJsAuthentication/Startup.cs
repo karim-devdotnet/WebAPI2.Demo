@@ -32,6 +32,7 @@ namespace AngularJsAuthentication
                 TokenEndpointPath = new PathString("/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(0.1),
                 Provider = new SimpleAuthorizationServerProvider()
+                
             };
 
             //Token Generation
